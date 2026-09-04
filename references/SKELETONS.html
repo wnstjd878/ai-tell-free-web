@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>밤티 없는 뼈대 9종</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/Paperlogy.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#fff; --bg-page:#f6f7f9; --bg-soft:#f7f8fa;
+  --ink:#191f28; --muted:#5f6b7a; --line:#ebeef1;
+  --accent:#e63946; --accent-soft:#fdecef; --pos:#15a05a;
+  --radius:16px; --radius-sm:10px;
+  --shadow:0 1px 2px rgba(28,33,54,.04),0 10px 28px -14px rgba(38,48,92,.14);
+}
+body{
+  font-family:"Pretendard Variable",-apple-system,"Apple SD Gothic Neo",sans-serif;
+  font-feature-settings:"cv03","cv04","cv09","cv11","tnum";
+  letter-spacing:-.01em; background:#dfe3e8; padding:26px 20px 60px;
+}
+.page{max-width:1120px;margin:0 auto}
+.head{margin:0 0 12px}
+.head .tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.06em;
+  padding:3px 9px;border-radius:20px;background:#e6f6ed;color:var(--pos);margin-bottom:7px}
+.head h2{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-.03em}
+.head p{font-size:13px;color:var(--muted);margin-top:5px;line-height:1.6;max-width:60em}
+.frame{border-radius:14px;overflow:hidden;box-shadow:0 3px 16px rgba(0,0,0,.09);margin-bottom:54px}
+.num-r{font-variant-numeric:tabular-nums;text-align:right}
+
+/* ═══════ A. 스플릿 ═══════ */
+.sk-split{background:var(--bg-page);display:grid;grid-template-columns:37% 63%}
+@media(max-width:820px){.sk-split{grid-template-columns:1fr}}
+.sk-split .side{background:var(--ink);padding:26px 24px;color:#fff}
+.sk-split .side .over{font-size:11px;font-weight:800;letter-spacing:.1em;color:#98a2b3;margin-bottom:8px}
+.sk-split .side h3{font-size:24px;font-weight:800;letter-spacing:-.04em;line-height:1.25}
+.sk-split .side .lede{font-size:13px;color:#aeb7c4;line-height:1.65;margin-top:12px}
+.sk-split .side .big{margin-top:40px;padding-top:20px;border-top:1px solid #333b47}
+.sk-split .side .big .k{font-size:11.5px;font-weight:600;color:#98a2b3;margin-bottom:8px}
+.sk-split .side .big .v{font-family:"Paperlogy",inherit;font-size:34px;font-weight:800;letter-spacing:-.04em;line-height:1}
+.sk-split .side .big .v small{font-size:14px;font-weight:700;color:#aeb7c4;margin-left:5px}
+.sk-split .side .kv{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:8px 0;border-bottom:1px solid #2c333d}
+.sk-split .side .kv .k2{font-size:12px;color:#98a2b3}
+.sk-split .side .kv .v2{font-size:13.5px;font-weight:800;font-variant-numeric:tabular-nums;text-align:right}
+.sk-split .side .kv .v2.pos{color:#3ddc84}
+.sk-split .side .btn{margin-top:20px;width:100%;background:var(--accent);color:#fff;border:none;
+  border-radius:999px;min-height:46px;font-size:13.5px;font-weight:700;font-family:inherit;cursor:pointer}
+.sk-split .main{padding:26px 24px}
+.sk-split .sect{margin-top:40px}.sk-split .sect:first-child{margin-top:0}
+.sk-split h4{font-size:17px;font-weight:800;color:var(--ink);letter-spacing:-.03em;margin-bottom:20px}
+.sk-split .find{background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:14px 16px}
+.sk-split .find p{font-size:14px;color:var(--ink);line-height:1.65;margin-bottom:8px}
+.sk-split .find p:last-child{margin-bottom:0}
+.sk-split .todo{display:flex;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+.sk-split .todo:first-of-type{border-top:1px solid var(--line)}
+.sk-split .n{flex:none;width:22px;height:22px;border-radius:999px;background:var(--accent);color:#fff;
+  font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.sk-split .todo h5{font-size:15px;font-weight:800;color:var(--ink);letter-spacing:-.02em;margin-bottom:8px;line-height:1.4}
+.sk-split .todo p{font-size:13px;color:var(--muted);line-height:1.6}
+.sk-split .src{font-size:11px;font-weight:700;color:var(--muted);margin-top:20px;display:block}
+
+/* ═══════ B. 히어로 수치 ═══════ */
+.sk-hero{background:#fff}
+.sk-hero .hero{padding:44px 34px 40px;border-bottom:2px solid var(--ink)}
+.sk-hero .over{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--accent);margin-bottom:16px}
+.sk-hero .huge{font-family:"Paperlogy",inherit;font-size:78px;font-weight:800;color:var(--ink);
+  letter-spacing:-.055em;line-height:.92;font-variant-numeric:tabular-nums}
+.sk-hero .huge small{font-size:26px;letter-spacing:-.02em;margin-left:8px}
+.sk-hero .cap{font-size:15px;color:var(--ink);line-height:1.6;margin-top:18px;max-width:38em;font-weight:600}
+.sk-hero .cap span{color:var(--muted);font-weight:400}
+.sk-hero .strip{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}
+@media(max-width:820px){.sk-hero .strip{grid-template-columns:1fr}}
+.sk-hero .cell{padding:20px 24px;border-right:1px solid var(--line)}
+.sk-hero .cell:last-child{border-right:none}
+.sk-hero .cell .k{font-size:11.5px;font-weight:600;color:var(--muted);margin-bottom:8px}
+.sk-hero .cell .v{font-size:24px;font-weight:800;color:var(--ink);letter-spacing:-.035em;font-variant-numeric:tabular-nums}
+.sk-hero .cell .v.pos{color:var(--pos)}
+.sk-hero .cell .v small{font-size:13px;font-weight:700;color:var(--muted);margin-left:4px}
+.sk-hero .body{padding:34px}
+.sk-hero .pull{border-left:3px solid var(--accent);padding-left:18px;margin-bottom:40px}
+.sk-hero .pull p{font-size:16px;color:var(--ink);line-height:1.6;letter-spacing:-.02em;margin-bottom:12px}
+.sk-hero .pull p:last-child{margin-bottom:0}
+.sk-hero .pull b{font-weight:800}
+.sk-hero h4{font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.08em;margin-bottom:20px}
+.sk-hero .acts{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:820px){.sk-hero .acts{grid-template-columns:1fr}}
+.sk-hero .act{border-top:2px solid var(--ink);padding-top:14px}
+.sk-hero .act .n{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:.1em;margin-bottom:8px}
+.sk-hero .act h5{font-size:15.5px;font-weight:800;color:var(--ink);letter-spacing:-.025em;margin-bottom:8px;line-height:1.4}
+.sk-hero .act p{font-size:13px;color:var(--muted);line-height:1.65}
+.sk-hero .foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:40px}
+.sk-hero .src{font-size:11px;font-weight:700;color:var(--muted)}
+.sk-hero .btn{background:var(--ink);color:#fff;border:none;border-radius:999px;min-height:44px;
+  padding:0 20px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer}
+
+/* ═══════ C. 타임라인 ═══════ */
+.sk-timeline{background:var(--bg-page);padding:26px 24px 24px}
+.sk-timeline .top{margin-bottom:34px}
+.sk-timeline .over{font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--muted);margin-bottom:6px}
+.sk-timeline .top h3{font-size:26px;font-weight:800;color:var(--ink);letter-spacing:-.04em;line-height:1.22}
+.sk-timeline .top p{font-size:13.5px;color:var(--muted);line-height:1.65;margin-top:8px}
+.sk-timeline .tl{position:relative;padding-left:32px}
+.sk-timeline .tl:before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.sk-timeline .step{position:relative;margin-bottom:40px}
+.sk-timeline .step:last-child{margin-bottom:0}
+.sk-timeline .dot{position:absolute;left:-32px;top:2px;width:20px;height:20px;border-radius:999px;
+  background:#fff;border:2px solid var(--line);display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:800;color:var(--muted)}
+.sk-timeline .step.hot .dot{background:var(--accent);border-color:var(--accent);color:#fff}
+.sk-timeline .step h4{font-size:16.5px;font-weight:800;color:var(--ink);letter-spacing:-.03em;margin-bottom:4px}
+.sk-timeline .step .when{font-size:11.5px;font-weight:600;color:var(--muted);margin-bottom:16px}
+.sk-timeline .box{background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:16px}
+.sk-timeline .kv{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:7px 0;border-bottom:1px solid var(--line)}
+.sk-timeline .kv:last-child{border-bottom:none;padding-bottom:0}
+.sk-timeline .kv:first-child{padding-top:0}
+.sk-timeline .k{font-size:12.5px;color:var(--muted)}
+.sk-timeline .v{font-size:15px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums;text-align:right}
+.sk-timeline .v.pos{color:var(--pos)}
+.sk-timeline .v small{font-size:11.5px;font-weight:600;color:var(--muted);margin-left:4px}
+.sk-timeline .find{background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:14px 16px}
+.sk-timeline .find p{font-size:14px;color:var(--ink);line-height:1.65;margin-bottom:8px}
+.sk-timeline .find p:last-child{margin-bottom:0}
+.sk-timeline .find b{font-weight:800}
+.sk-timeline .act{background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:16px;margin-bottom:12px}
+.sk-timeline .act:last-of-type{margin-bottom:0}
+.sk-timeline .act h5{font-size:15px;font-weight:800;color:var(--ink);letter-spacing:-.02em;margin-bottom:8px;line-height:1.4}
+.sk-timeline .act p{font-size:13px;color:var(--muted);line-height:1.6}
+.sk-timeline .foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:20px}
+.sk-timeline .src{font-size:11px;font-weight:700;color:var(--muted)}
+.sk-timeline .btn{background:var(--accent);color:#fff;border:none;border-radius:999px;min-height:44px;
+  padding:0 18px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer}
+
+/* ═══════ D. 모자이크 ═══════ */
+.sk-mosaic{background:var(--bg-page);padding:20px}
+.sk-mosaic .grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+@media(max-width:820px){.sk-mosaic .grid{grid-template-columns:repeat(2,1fr)}}
+.sk-mosaic .t{background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:18px}
+.sk-mosaic .t.wide{grid-column:span 4}
+.sk-mosaic .t.narrow{grid-column:span 2}
+.sk-mosaic .t.half{grid-column:span 3}
+.sk-mosaic .t.full{grid-column:span 6}
+@media(max-width:820px){.sk-mosaic .t.wide,.sk-mosaic .t.half,.sk-mosaic .t.full{grid-column:span 2}.sk-mosaic .t.narrow{grid-column:span 1}}
+.sk-mosaic .t.ink{background:var(--ink);border-color:var(--ink)}
+.sk-mosaic .over{font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--muted);margin-bottom:6px}
+.sk-mosaic .t.ink .over{color:#98a2b3}
+.sk-mosaic h3{font-size:23px;font-weight:800;color:var(--ink);letter-spacing:-.04em;line-height:1.25}
+.sk-mosaic .t.ink h3{color:#fff}
+.sk-mosaic .lede{font-size:13px;color:var(--muted);line-height:1.65;margin-top:8px}
+.sk-mosaic .t.ink .lede{color:#aeb7c4}
+.sk-mosaic .k{font-size:11.5px;font-weight:600;color:var(--muted);margin-bottom:8px}
+.sk-mosaic .v{font-size:27px;font-weight:800;color:var(--ink);letter-spacing:-.04em;
+  font-variant-numeric:tabular-nums;line-height:1.1}
+.sk-mosaic .v.pos{color:var(--pos)}
+.sk-mosaic .v small{font-size:13px;font-weight:700;color:var(--muted);margin-left:4px}
+.sk-mosaic .sub{font-size:11.5px;color:var(--muted);margin-top:8px}
+.sk-mosaic .t.find{background:var(--accent-soft);border-color:transparent;border-left:3px solid var(--accent);border-radius:0 var(--radius) var(--radius) 0}
+.sk-mosaic .t.find .over{color:var(--accent)}
+.sk-mosaic .t.find p{font-size:14px;color:var(--ink);line-height:1.65;margin-bottom:8px}
+.sk-mosaic .t.find p:last-child{margin-bottom:0}
+.sk-mosaic .t.find b{font-weight:800}
+.sk-mosaic .n{display:inline-flex;width:20px;height:20px;border-radius:999px;background:var(--accent);color:#fff;
+  font-size:11px;font-weight:800;align-items:center;justify-content:center;margin-bottom:12px}
+.sk-mosaic h5{font-size:14.5px;font-weight:800;color:var(--ink);letter-spacing:-.02em;margin-bottom:8px;line-height:1.4}
+.sk-mosaic .t p.desc{font-size:12.5px;color:var(--muted);line-height:1.6}
+.sk-mosaic .barfoot{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.sk-mosaic .src{font-size:11px;font-weight:700;color:var(--muted)}
+.sk-mosaic .btn{background:var(--accent);color:#fff;border:none;border-radius:999px;min-height:42px;
+  padding:0 18px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer}
+
+/* ═══════ E. 문답 ═══════ */
+.sk-qa{background:#fff;padding:34px 32px 30px}
+.sk-qa .over{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--accent);margin-bottom:14px}
+.sk-qa .qa{padding:28px 0;border-bottom:1px solid var(--line)}
+.sk-qa .qa:first-of-type{border-top:2px solid var(--ink);padding-top:26px}
+.sk-qa .qa:last-of-type{border-bottom:2px solid var(--ink)}
+.sk-qa .q{font-family:"Paperlogy",inherit;font-size:27px;font-weight:800;color:var(--ink);
+  letter-spacing:-.045em;line-height:1.28;margin-bottom:18px}
+.sk-qa .sk-split{font-size:15px;color:var(--ink);line-height:1.75;letter-spacing:-.015em;max-width:44em}
+.sk-qa .sk-split b{font-weight:800}
+.sk-qa .sk-split .em{color:var(--accent);font-weight:800}
+.sk-qa .facts{display:flex;flex-wrap:wrap;gap:0 34px;margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
+.sk-qa .f .k{font-size:11px;font-weight:600;color:var(--muted);margin-bottom:5px}
+.sk-qa .f .v{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-.035em;font-variant-numeric:tabular-nums}
+.sk-qa .f .v.pos{color:var(--pos)}
+.sk-qa .f .v small{font-size:12px;font-weight:700;color:var(--muted);margin-left:3px}
+.sk-qa .do{margin-top:20px;padding-left:18px;border-left:3px solid var(--accent)}
+.sk-qa .do .n{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:.1em;margin-bottom:6px}
+.sk-qa .do h5{font-size:15.5px;font-weight:800;color:var(--ink);letter-spacing:-.025em;line-height:1.45;margin-bottom:6px}
+.sk-qa .do p{font-size:13px;color:var(--muted);line-height:1.65}
+.sk-qa .do + .do{margin-top:20px}
+.sk-qa .foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:20px}
+.sk-qa .src{font-size:11px;font-weight:700;color:var(--muted)}
+.sk-qa .btn{background:var(--accent);color:#fff;border:none;border-radius:999px;min-height:44px;
+  padding:0 20px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer}
+
+/* ══════════ 1. 리포트 ══════════ */
+.sk-report { background:var(--bg-page); padding:18px; }
+.sk-report .card { background:var(--bg); border:1px solid var(--line); border-radius:var(--radius);
+  box-shadow:var(--shadow); padding:22px; }
+.sk-report .over { font-size:11px; font-weight:800; letter-spacing:.08em; color:var(--muted); margin-bottom:6px; }
+.sk-report h3 { font-size:25px; font-weight:800; color:var(--ink); letter-spacing:-.04em; line-height:1.25; }
+.sk-report .lede { font-size:14px; color:var(--muted); line-height:1.6; margin-top:8px; }
+.sk-report .sect { margin-top:40px; }
+.sk-report h4 { font-size:17px; font-weight:800; color:var(--ink); letter-spacing:-.03em; margin-bottom:20px; }
+.sk-report .duo { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media(max-width:820px){.sk-report .duo{grid-template-columns:1fr}}
+.sk-report .soft { background:var(--bg-soft); border-radius:var(--radius-sm); padding:16px; }
+.sk-report .soft-t { font-size:12px; font-weight:700; color:var(--muted); margin-bottom:14px; }
+.sk-report .kv { display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-bottom:8px; }
+.sk-report .kv:last-child{ margin-bottom:0; }
+.sk-report .k { font-size:12px; font-weight:500; color:var(--muted); }
+.sk-report .v { font-size:15px; font-weight:800; color:var(--ink); font-variant-numeric:tabular-nums; text-align:right; }
+.sk-report .v.pos { color:var(--pos); }
+.sk-report .find { background:var(--accent-soft); border-left:3px solid var(--accent);
+  border-radius:0 8px 8px 0; padding:14px 16px; }
+.sk-report .find p { font-size:14px; color:var(--ink); line-height:1.65; margin-bottom:8px; }
+.sk-report .find p:last-child{ margin-bottom:0; }
+.sk-report .find b { font-weight:800; }
+.sk-report .todo { display:flex; gap:12px; align-items:flex-start; margin-bottom:20px; }
+.sk-report .todo:last-of-type{ margin-bottom:0; }
+.sk-report .num { flex:none; width:22px; height:22px; border-radius:999px; background:var(--accent); color:#fff;
+  font-size:12px; font-weight:800; display:flex; align-items:center; justify-content:center;
+  font-variant-numeric:tabular-nums; margin-top:1px; }
+.sk-report .todo h5 { font-size:15px; font-weight:800; color:var(--ink); letter-spacing:-.02em; margin-bottom:8px; }
+.sk-report .todo p { font-size:13px; color:var(--muted); line-height:1.6; }
+.sk-report .foot { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:20px; }
+.sk-report .src { font-size:11px; font-weight:700; color:var(--muted); }
+.sk-report .btn { background:var(--accent); color:#fff; border:1px solid var(--accent); border-radius:999px;
+  min-height:44px; padding:0 18px; font-size:13px; font-weight:700; font-family:inherit; cursor:pointer; }
+
+/* ══════════ 2. 에디토리얼 ══════════ */
+.sk-editorial { background:#fff; padding:30px 26px 26px; }
+.sk-editorial .over { font-size:11px; font-weight:800; letter-spacing:.14em; color:var(--accent); margin-bottom:14px; }
+.sk-editorial h3 { font-family:"Paperlogy",inherit; font-size:40px; font-weight:800; color:var(--ink);
+  letter-spacing:-.045em; line-height:1.12; }
+.sk-editorial .lede { font-size:14px; color:var(--muted); line-height:1.7; margin-top:14px; max-width:34em; }
+.sk-editorial .rule { height:2px; background:var(--ink); margin:26px 0 0; }
+.sk-editorial .rule.hair { height:1px; background:var(--line); }
+.sk-editorial .sect { margin-top:40px; }
+.sk-editorial .snum { font-family:"Paperlogy",inherit; font-size:12px; font-weight:800; color:var(--accent);
+  letter-spacing:.1em; margin-bottom:8px; }
+.sk-editorial h4 { font-family:"Paperlogy",inherit; font-size:21px; font-weight:800; color:var(--ink);
+  letter-spacing:-.035em; margin-bottom:20px; }
+.sk-editorial .stat { display:flex; justify-content:space-between; align-items:baseline; gap:14px;
+  padding:12px 0; border-bottom:1px solid var(--line); }
+.sk-editorial .stat:first-of-type{ border-top:1px solid var(--line); }
+.sk-editorial .k { font-size:12px; font-weight:500; color:var(--muted); }
+.sk-editorial .v { font-family:"Paperlogy",inherit; font-size:20px; font-weight:800; color:var(--ink);
+  font-variant-numeric:tabular-nums; letter-spacing:-.03em; text-align:right; }
+.sk-editorial .v.pos { color:var(--pos); }
+.sk-editorial .v small { font-size:12px; font-weight:700; color:var(--muted); margin-left:5px; letter-spacing:0; }
+.sk-editorial .pull { border-left:3px solid var(--accent); padding-left:18px; margin-top:20px; }
+.sk-editorial .pull p { font-size:16px; color:var(--ink); line-height:1.6; letter-spacing:-.02em; margin-bottom:12px; }
+.sk-editorial .pull p:last-child{ margin-bottom:0; }
+.sk-editorial .pull b { font-weight:800; }
+.sk-editorial .todo { padding:20px 0; border-bottom:1px solid var(--line); }
+.sk-editorial .todo:first-of-type{ border-top:1px solid var(--line); }
+.sk-editorial .tnum { font-family:"Paperlogy",inherit; font-size:11px; font-weight:800; color:var(--accent);
+  letter-spacing:.1em; margin-bottom:8px; }
+.sk-editorial .todo h5 { font-size:16px; font-weight:800; color:var(--ink); letter-spacing:-.025em; margin-bottom:8px; line-height:1.4; }
+.sk-editorial .todo p { font-size:13px; color:var(--muted); line-height:1.65; }
+.sk-editorial .foot { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:20px; }
+.sk-editorial .src { font-size:11px; font-weight:700; color:var(--muted); letter-spacing:.02em; }
+.sk-editorial .btn { background:var(--ink); color:#fff; border:none; border-radius:999px;
+  min-height:44px; padding:0 18px; font-size:13px; font-weight:700; font-family:inherit; cursor:pointer; }
+
+/* ══════════ 3. 데이터 ══════════ */
+.sk-data { background:var(--bg-page); padding:0; }
+.sk-data .top { background:var(--ink); padding:20px 22px; }
+.sk-data .over { font-size:11px; font-weight:800; letter-spacing:.09em; color:#98a2b3; margin-bottom:6px; }
+.sk-data .top h3 { font-size:22px; font-weight:800; color:#fff; letter-spacing:-.035em; line-height:1.25; }
+.sk-data .top p { font-size:12.5px; color:#aeb7c4; line-height:1.6; margin-top:8px; }
+.sk-data .body { padding:20px 22px 22px; }
+.sk-data .sect { margin-top:40px; }
+.sk-data .sect:first-child{ margin-top:0; }
+.sk-data h4 { font-size:12px; font-weight:800; color:var(--muted); letter-spacing:.06em;
+  padding-bottom:8px; border-bottom:2px solid var(--ink); margin-bottom:0; }
+.sk-data .row { display:flex; justify-content:space-between; align-items:baseline; gap:14px;
+  padding:9px 0; border-bottom:1px solid var(--line); }
+.sk-data .k { font-size:12.5px; font-weight:500; color:var(--muted); }
+.sk-data .v { font-size:15px; font-weight:800; color:var(--ink); font-variant-numeric:tabular-nums; text-align:right; }
+.sk-data .v.pos { color:var(--pos); }
+.sk-data .v small { font-size:11.5px; font-weight:600; color:var(--muted); margin-left:5px; }
+.sk-data .grp { font-size:11px; font-weight:800; color:var(--ink); letter-spacing:.04em;
+  background:var(--bg-soft); padding:7px 10px; margin-top:20px; }
+.sk-data .grp:first-of-type{ margin-top:12px; }
+.sk-data .find { background:var(--accent-soft); border-left:3px solid var(--accent); padding:14px 16px; margin-top:12px; }
+.sk-data .find p { font-size:13.5px; color:var(--ink); line-height:1.65; margin-bottom:8px; }
+.sk-data .find p:last-child{ margin-bottom:0; }
+.sk-data .find b { font-weight:800; }
+.sk-data .todo { display:grid; grid-template-columns:24px 1fr; gap:12px; padding:14px 0; border-bottom:1px solid var(--line); }
+.sk-data .num { width:24px; height:24px; border-radius:6px; background:var(--accent); color:#fff;
+  font-size:12px; font-weight:800; display:flex; align-items:center; justify-content:center;
+  font-variant-numeric:tabular-nums; }
+.sk-data .todo h5 { font-size:14.5px; font-weight:800; color:var(--ink); letter-spacing:-.02em; margin-bottom:6px; line-height:1.45; }
+.sk-data .todo p { font-size:12.5px; color:var(--muted); line-height:1.6; }
+.sk-data .foot { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:20px; }
+.sk-data .src { font-size:11px; font-weight:700; color:var(--muted); font-variant-numeric:tabular-nums; }
+.sk-data .btn { background:var(--accent); color:#fff; border:none; border-radius:8px;
+  min-height:40px; padding:0 16px; font-size:13px; font-weight:700; font-family:inherit; cursor:pointer; }
+
+/* ══════════ 4. 랜딩 ══════════ */
+.sk-landing{background:#fff}
+.sk-landing .hero{padding:34px 26px 30px}
+.sk-landing .over{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--accent)}
+.sk-landing h3{font-family:"Paperlogy",inherit;font-size:44px;font-weight:800;color:var(--ink);letter-spacing:-.045em;line-height:1.06;margin-top:10px}
+.sk-landing h3 .dim{color:#b6bec9}
+.sk-landing .lede{font-size:15px;color:var(--muted);line-height:1.65;margin-top:12px;max-width:32em}
+.sk-landing .lede .hl{color:var(--ink);font-weight:800;font-size:1.35em;letter-spacing:-.03em;background:linear-gradient(transparent 58%, #ffe25a 58%);padding:0 2px}
+.sk-landing .cta{display:flex;align-items:center;gap:12px;margin-top:18px}
+.sk-landing .btn{background:var(--accent);color:#fff;border:none;border-radius:999px;min-height:46px;padding:0 22px;font-size:14px;font-weight:800;font-family:inherit;cursor:pointer}
+.sk-landing .note{font-size:12px;color:var(--muted)}
+.sk-landing .band{background:var(--bg-page);padding:22px 26px 26px}
+.sk-landing .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:820px){.sk-landing .kpis{grid-template-columns:1fr 1fr}}
+.sk-landing .kpi{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 14px}
+.sk-landing .kpi .k{font-size:11.5px;font-weight:600;color:var(--muted)}
+.sk-landing .kpi .v{font-family:"Paperlogy",inherit;font-size:23px;font-weight:800;letter-spacing:-.03em;color:var(--ink);margin-top:6px;font-variant-numeric:tabular-nums}
+.sk-landing .kpi .v.acc{color:var(--accent)}
+.sk-landing .kpi .v.dim{color:#b6bec9}
+.sk-landing .kpi .s{font-size:11px;color:var(--muted);margin-top:4px}
+.sk-landing .inkband{background:var(--ink);color:#fff;padding:30px 26px 34px}
+.sk-landing .inkband .over{color:#ff8b95}
+.sk-landing .inkband h4{font-family:"Paperlogy",inherit;font-size:26px;font-weight:800;letter-spacing:-.04em;line-height:1.15;margin-top:8px;color:#fff}
+.sk-landing .inkband h4 .dim{color:#6b7686}
+.sk-landing .exgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+@media(max-width:820px){.sk-landing .exgrid{grid-template-columns:1fr}}
+.sk-landing .ex{border-radius:var(--radius);padding:18px 16px;background:#232b38;border:1px solid rgba(255,255,255,.07)}
+.sk-landing .ex .k{font-size:12px;font-weight:600;color:#8f9aab}
+.sk-landing .ex .v{font-family:"Paperlogy",inherit;font-size:30px;font-weight:800;letter-spacing:-.04em;margin-top:6px;font-variant-numeric:tabular-nums;color:#fff}
+.sk-landing .ex.hero{background:#fff}
+.sk-landing .ex.hero .k{color:var(--muted)}
+.sk-landing .ex.hero .v{color:var(--accent)}
+.sk-landing .steps{padding:24px 26px 30px}
+.sk-landing .steps h4{font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.06em}
+.sk-landing .steps .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+@media(max-width:820px){.sk-landing .steps .grid{grid-template-columns:1fr 1fr}}
+.sk-landing .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 14px}
+.sk-landing .shead{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}
+.sk-landing .n{width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font-family:"Paperlogy",inherit;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.sk-landing .time{font-size:11px;font-weight:700;color:var(--muted);background:var(--bg-soft);padding:3px 8px;border-radius:999px}
+.sk-landing .card h5{font-size:14.5px;font-weight:800;color:var(--ink);letter-spacing:-.02em;margin-bottom:6px}
+.sk-landing .card p{font-size:12px;color:var(--muted);line-height:1.6}
+
+</style>
+</head>
+<body>
+
+<div class="page">
+<!-- ══════ 1 ══════ -->
+<div class="head">
+  <span class="tag">밤티 없음</span>
+  <h2>1. 리포트 — 회색 바탕 위 흰 카드</h2>
+  <p>정보를 카드로 감싸는 가장 안정적인 판. 어떤 화면에 넣어도 무난합니다. 사장님 대시보드·운영분석의 기본값. 고민되면 이걸 쓰면 됩니다.</p>
+</div>
+<div class="frame sk-report">
+      <div class="card">
+        <div class="over">MENU REPORT</div>
+        <h3>우리 가게 메뉴 성적표</h3>
+        <p class="lede">포스기 판매 기록과 손님 리뷰, 두 데이터를 겹쳐 읽고 할 일을 뽑았습니다.</p>
+
+        <div class="sect">
+          <h4>1. 이렇게 읽었습니다</h4>
+          <div class="duo">
+            <div class="soft">
+              <div class="soft-t">실제 판매 · 최근 30일</div>
+              <div class="kv"><span class="k">판매된 메뉴</span><span class="v">72종 317개</span></div>
+              <div class="kv"><span class="k">매출</span><span class="v">₩7,516,800</span></div>
+              <div class="kv"><span class="k">최다 판매</span><span class="v">토마토 파스타 19개</span></div>
+            </div>
+            <div class="soft">
+              <div class="soft-t">손님 리뷰 · 정성 반응</div>
+              <div class="kv"><span class="k">메뉴 언급</span><span class="v">총 26번</span></div>
+              <div class="kv"><span class="k">최다 칭찬</span><span class="v">묵은지 리조또 5번</span></div>
+              <div class="kv"><span class="k">주문 대비 반응</span><span class="v pos">2명 중 1명</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sect">
+          <h4>2. 겹쳐 보니 이런 게 보입니다</h4>
+          <div class="find">
+            <p>잘 팔리고 칭찬도 받는 메뉴는 <b>라구 파스타 · 묵은지 리조또</b> 둘입니다. 검증이 끝난 간판입니다.</p>
+            <p>판매 상위 <b>아메리카노</b>는 리뷰에 한 번도 안 나옵니다. 많이 팔리는데 아무도 이야기하지 않는 메뉴예요.</p>
+            <p><b>해산물 샐러드</b>는 시킨 손님 3명 중 1명이 리뷰에 쓸 만큼 반응이 좋은데, 정작 주문은 적습니다.</p>
+          </div>
+        </div>
+
+        <div class="sect">
+          <h4>3. 그래서, 이렇게 하세요</h4>
+          <div class="todo">
+            <div class="num">1</div>
+            <div>
+              <h5>광고에는 라구 파스타 · 묵은지 리조또를 내세우세요</h5>
+              <p>광고로 새 손님이 와도 실망하지 않는, 판매와 리뷰가 모두 검증된 메뉴입니다.</p>
+            </div>
+          </div>
+          <div class="todo">
+            <div class="num">2</div>
+            <div>
+              <h5>해산물 샐러드를 직원 추천 1순위로 올리세요</h5>
+              <p>반응은 검증됐는데 한 달 6개뿐. 권하면 팔립니다.</p>
+            </div>
+          </div>
+          <div class="foot">
+            <span class="src">표본 317건 · 리뷰 26건 · 2026-07-22</span>
+            <button class="btn">추천 새로 생성</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- ══════ 2 ══════ -->
+<div class="head">
+  <span class="tag">밤티 없음</span>
+  <h2>2. 에디토리얼 — 카드 없이 흰 종이 + 굵은 가로선</h2>
+  <p>헤드라인을 40px 두 줄로 뽑고 여백을 넓게 씁니다. 밀도는 낮지만 인상이 셉니다. 공개 보고서·랜딩처럼 읽히는 화면용.</p>
+</div>
+<div class="frame sk-editorial">
+      <div class="over">MENU REPORT</div>
+      <h3>우리 가게<br>메뉴 성적표</h3>
+      <p class="lede">포스기 판매 기록과 손님 리뷰, 두 데이터를 겹쳐 읽고 할 일을 뽑았습니다.</p>
+      <div class="rule"></div>
+
+      <div class="sect">
+        <div class="snum">01</div>
+        <h4>이렇게 읽었습니다</h4>
+        <div class="stat"><span class="k">판매된 메뉴</span><span class="v">72<small>종</small> 317<small>개</small></span></div>
+        <div class="stat"><span class="k">매출</span><span class="v">7,516,800<small>원</small></span></div>
+        <div class="stat"><span class="k">리뷰 속 메뉴 언급</span><span class="v">26<small>번</small></span></div>
+        <div class="stat"><span class="k">주문 대비 반응</span><span class="v pos">2<small>명 중 1명</small></span></div>
+      </div>
+
+      <div class="sect">
+        <div class="snum">02</div>
+        <h4>겹쳐 보니 이런 게 보입니다</h4>
+        <div class="pull">
+          <p><b>라구 파스타 · 묵은지 리조또</b>는 잘 팔리고 칭찬도 받습니다. 검증이 끝난 간판입니다.</p>
+          <p>판매 상위 <b>아메리카노</b>는 리뷰에 한 번도 안 나옵니다.</p>
+          <p><b>해산물 샐러드</b>는 반응이 좋은데 정작 주문이 적습니다.</p>
+        </div>
+      </div>
+
+      <div class="sect">
+        <div class="snum">03</div>
+        <h4>그래서, 이렇게 하세요</h4>
+        <div class="todo">
+          <div class="tnum">ACTION 1</div>
+          <h5>광고에는 라구 파스타 · 묵은지 리조또를 내세우세요</h5>
+          <p>광고로 새 손님이 와도 실망하지 않는, 판매와 리뷰가 모두 검증된 메뉴입니다.</p>
+        </div>
+        <div class="todo">
+          <div class="tnum">ACTION 2</div>
+          <h5>해산물 샐러드를 직원 추천 1순위로 올리세요</h5>
+          <p>반응은 검증됐는데 한 달 6개뿐. 권하면 팔립니다.</p>
+        </div>
+        <div class="foot">
+          <span class="src">표본 317건 · 리뷰 26건 · 2026-07-22</span>
+          <button class="btn">추천 새로 생성</button>
+        </div>
+      </div>
+    </div>
+
+<!-- ══════ 3 ══════ -->
+<div class="head">
+  <span class="tag">밤티 없음</span>
+  <h2>3. 데이터 — 잉크색 머리 + 촘촘한 표</h2>
+  <p>행 구분선이 계속 이어져 숫자가 세로로 훑어집니다. 회색 띠로 묶음을 나눕니다. 버튼도 사각이라 도구 같은 인상. 어드민·관제탑용.</p>
+</div>
+<div class="frame sk-data">
+      <div class="top">
+        <div class="over">MENU REPORT</div>
+        <h3>우리 가게 메뉴 성적표</h3>
+        <p>포스기 판매 기록과 손님 리뷰, 두 데이터를 겹쳐 읽고 할 일을 뽑았습니다.</p>
+      </div>
+      <div class="body">
+
+        <div class="sect">
+          <h4>1. 이렇게 읽었습니다</h4>
+          <div class="grp">실제 판매 · 포스기 최근 30일</div>
+          <div class="row"><span class="k">판매된 메뉴</span><span class="v">72<small>종</small> 317<small>개</small></span></div>
+          <div class="row"><span class="k">매출</span><span class="v">7,516,800<small>원</small></span></div>
+          <div class="row"><span class="k">최다 판매</span><span class="v">토마토 파스타 <small>19개</small></span></div>
+          <div class="grp">손님 리뷰 · 정성 반응</div>
+          <div class="row"><span class="k">메뉴 언급</span><span class="v">26<small>번</small></span></div>
+          <div class="row"><span class="k">최다 칭찬</span><span class="v">묵은지 리조또 <small>5번</small></span></div>
+          <div class="row"><span class="k">주문 대비 반응</span><span class="v pos">2<small>명 중 1명</small></span></div>
+        </div>
+
+        <div class="sect">
+          <h4>2. 겹쳐 보니 이런 게 보입니다</h4>
+          <div class="find">
+            <p>잘 팔리고 칭찬도 받는 메뉴는 <b>라구 파스타 · 묵은지 리조또</b> 둘입니다.</p>
+            <p>판매 상위 <b>아메리카노</b>는 리뷰에 한 번도 안 나옵니다.</p>
+            <p><b>해산물 샐러드</b>는 반응이 좋은데 정작 주문이 적습니다.</p>
+          </div>
+        </div>
+
+        <div class="sect">
+          <h4>3. 그래서, 이렇게 하세요</h4>
+          <div class="todo">
+            <div class="num">1</div>
+            <div>
+              <h5>광고에는 라구 파스타 · 묵은지 리조또를 내세우세요</h5>
+              <p>광고로 새 손님이 와도 실망하지 않는, 판매와 리뷰가 모두 검증된 메뉴입니다.</p>
+            </div>
+          </div>
+          <div class="todo">
+            <div class="num">2</div>
+            <div>
+              <h5>해산물 샐러드를 직원 추천 1순위로 올리세요</h5>
+              <p>반응은 검증됐는데 한 달 6개뿐. 권하면 팔립니다.</p>
+            </div>
+          </div>
+          <div class="foot">
+            <span class="src">표본 317건 · 리뷰 26건 · 2026-07-22</span>
+            <button class="btn">추천 새로 생성</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+<!-- ══════ A ══════ -->
+<div class="head">
+  <span class="tag">밤티 없음</span>
+  <h2>4. 스플릿 — 왼쪽 잉크 패널 고정 + 오른쪽 본문</h2>
+  <p>결론과 핵심 수치를 왼쪽 어두운 패널에 붙박고, 근거와 할 일은 오른쪽에서 읽힙니다. 좌우 비대칭 37:63. 스크롤해도 결론이 안 사라지는 구조라 상세 화면·매장 상세에 맞습니다.</p>
+</div>
+<div class="frame sk-split">
+  <div class="side">
+    <div class="over">MENU REPORT</div>
+    <h3>우리 가게<br>메뉴 성적표</h3>
+    <p class="lede">포스기 판매 기록과 손님 리뷰를 겹쳐 읽었습니다.</p>
+    <div class="big">
+      <div class="k">최근 30일 메뉴 매출</div>
+      <div class="v">7,516,800<small>원</small></div>
+    </div>
+    <div style="margin-top:20px">
+      <div class="kv"><span class="k2">판매된 메뉴</span><span class="v2">72종 317개</span></div>
+      <div class="kv"><span class="k2">리뷰 속 언급</span><span class="v2">26번</span></div>
+      <div class="kv"><span class="k2">주문 대비 반응</span><span class="v2 pos">2명 중 1명</span></div>
+    </div>
+    <button class="btn">추천 새로 생성</button>
+  </div>
+  <div class="main">
+    <div class="sect">
+      <h4>겹쳐 보니 이런 게 보입니다</h4>
+      <div class="find">
+        <p>잘 팔리고 칭찬도 받는 메뉴는 <b>라구 파스타 · 묵은지 리조또</b> 둘입니다. 검증이 끝난 간판입니다.</p>
+        <p>판매 상위 <b>아메리카노</b>는 리뷰에 한 번도 안 나옵니다. 많이 팔리는데 아무도 이야기하지 않는 메뉴예요.</p>
+        <p><b>해산물 샐러드</b>는 시킨 손님 3명 중 1명이 리뷰에 쓸 만큼 반응이 좋은데, 정작 주문은 적습니다.</p>
+      </div>
+    </div>
+    <div class="sect">
+      <h4>그래서, 이렇게 하세요</h4>
+      <div class="todo"><div class="n">1</div><div>
+        <h5>광고에는 라구 파스타 · 묵은지 리조또를 내세우세요</h5>
+        <p>광고로 새 손님이 와도 실망하지 않는, 판매와 리뷰가 모두 검증된 메뉴입니다.</p></div></div>
+      <div class="todo"><div class="n">2</div><div>
+        <h5>해산물 샐러드를 직원 추천 1순위로 올리세요</h5>
+        <p>반응은 검증됐는데 한 달 6개뿐. 권하면 팔립니다.</p></div></div>
+      <span class="src">표본 317건 · 리뷰 26건 · 2026-07-22</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ B ══════ -->
+<div class="head">
+  <span class="tag">밤티 없음</span>
+  <h2>5. 히어로 수치 — 숫자 하나가 화면을 지배</h2>
+  <p>제일 중요한 수치를 78px로 띄우고, 그 아래 가로 3분할로 보조 수치를 깔았습니다. 카드가 없고 굵은 가로선으로만 나눕니다. 첫 화면·요약 상단·공유용 보고서에 맞습니다.</p>
+</div>
+<div class="frame sk-hero">
+  <div class="hero">
+    <div class="over">MENU REPORT · 최근 30일</div>
+    <div class="huge">7,516,800<small>원</small></div>
+    <p class="cap">메뉴 72종 317개가 팔렸습니다. <span>그중 광고에 내세울 만큼 검증된 메뉴는 둘뿐입니다.</span></p>
+  </div>
+  <div class="strip">
+    <div class="cell"><div class="k">최다 판매</div><div class="v">토마토 파스타 <small>19개</small></div></div>
+    <div class="cell"><div class="k">최다 칭찬</div><div class="v">묵은지 리조또 <small>5번</small></div></div>
+    <div class="cell"><div class="k">주문 대비 반응</div><div class="v pos">2<small>명 중 1명</small></div></div>
+  </div>
+  <div class="body">
+    <div class="pull">
+      <p><b>라구 파스타 · 묵은지 리조또</b>는 잘 팔리고 칭찬도 받습니다. 검증이 끝난 간판입니다.</p>
+      <p>판매 상위 <b>아메리카노</b>는 리뷰에 한 번도 안 나옵니다.</p>
+      <p><b>해산물 샐러드</b>는 반응이 좋은데 정작 주문이 적습니다.</p>
+    </div>
+    <h4>그래서, 이렇게 하세요</h4>
+    <div class="acts">
+      <div class="act"><div class="n">ACTION 1</div>
+        <h5>광고에는 라구 파스타 · 묵은지 리조또를 내세우세요</h5>
+        <p>광고로 새 손님이 와도 실망하지 않는, 판매와 리뷰가 모두 검증된 메뉴입니다.</p></div>
+      <div class="act"><div class="n">ACTION 2</div>
+        <h5>해산물 샐러드를 직원 추천 1순위로 올리세요</h5>
+        <p>반응은 검증됐는데 한 달 6개뿐. 권하면 팔립니다.</p></div>
+    </div>
+    <div class="foot">
+      <span class="src">표본 317건 · 리뷰 26건 · 2026-07-22</span>
+      <button class="btn">추천 새로 생성</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ C ══════ -->
+<div class="head">
+  <span class="tag">밤티 없음</span>
+  <h2>6. 타임라인 — 세로선 따라 흐르는 단계</h2>
+  <p>읽음 → 발견 → 할 일이 세로선 위 점으로 이어집니다. 지금 단계만 빨간 점입니다. 순서가 있는 작업, 진행 상황, 파이프라인 화면에 맞습니다.</p>
+</div>
+<div class="frame sk-timeline">
+  <div class="top">
+    <div class="over">MENU REPORT</div>
+    <h3>우리 가게 메뉴 성적표</h3>
+    <p>포스기 판매 기록과 손님 리뷰, 두 데이터를 겹쳐 읽고 할 일을 뽑았습니다.</p>
+  </div>
+  <div class="tl">
+    <div class="step">
+      <div class="dot">1</div>
+      <h4>이렇게 읽었습니다</h4>
+      <div class="when">포스기 · 리뷰 · 최근 30일</div>
+      <div class="box">
+        <div class="kv"><span class="k">판매된 메뉴</span><span class="v">72<small>종</small> 317<small>개</small></span></div>
+        <div class="kv"><span class="k">매출</span><span class="v">7,516,800<small>원</small></span></div>
+        <div class="kv"><span class="k">리뷰 속 메뉴 언급</span><span class="v">26<small>번</small></span></div>
+        <div class="kv"><span class="k">주문 대비 반응</span><span class="v pos">2<small>명 중 1명</small></span></div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="dot">2</div>
+      <h4>겹쳐 보니 이런 게 보입니다</h4>
+      <div class="when">두 데이터를 교차한 결과</div>
+      <div class="find">
+        <p>잘 팔리고 칭찬도 받는 메뉴는 <b>라구 파스타 · 묵은지 리조또</b> 둘입니다.</p>
+        <p>판매 상위 <b>아메리카노</b>는 리뷰에 한 번도 안 나옵니다.</p>
+        <p><b>해산물 샐러드</b>는 반응이 좋은데 정작 주문이 적습니다.</p>
+      </div>
+    </div>
+    <div class="step hot">
+      <div class="dot">3</div>
+      <h4>그래서, 이렇게 하세요</h4>
+      <div class="when">지금 할 차례</div>
+      <div class="act">
+        <h5>광고에는 라구 파스타 · 묵은지 리조또를 내세우세요</h5>
+        <p>광고로 새 손님이 와도 실망하지 않는, 판매와 리뷰가 모두 검증된 메뉴입니다.</p>
+      </div>
+      <div class="act">
+        <h5>해산물 샐러드를 직원 추천 1순위로 올리세요</h5>
+        <p>반응은 검증됐는데 한 달 6개뿐. 권하면 팔립니다.</p>
+      </div>
+      <div class="foot">
+        <span class="src">표본 317건 · 리뷰 26건 · 2026-07-22</span>
+        <button class="btn">추천 새로 생성</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ D ══════ -->
+<div class="head">
+  <span class="tag">밤티 없음</span>
+  <h2>7. 모자이크 — 크기 다른 타일 비대칭 배치</h2>
+  <p>6칸 그리드 위에 4칸·2칸·3칸 타일을 섞어 깔았습니다. 균등 3열 카드와 달리 타일마다 무게가 다릅니다. 훑어보는 대시보드, 항목이 여럿인 요약 화면에 맞습니다.</p>
+</div>
+<div class="frame sk-mosaic">
+  <div class="grid">
+    <div class="t wide ink">
+      <div class="over">MENU REPORT</div>
+      <h3>우리 가게 메뉴 성적표</h3>
+      <p class="lede">포스기 판매 기록과 손님 리뷰, 두 데이터를 겹쳐 읽고 할 일을 뽑았습니다.</p>
+    </div>
+    <div class="t narrow">
+      <div class="k">최근 30일 매출</div>
+      <div class="v">7,516,800<small>원</small></div>
+      <div class="sub">메뉴 72종 317개</div>
+    </div>
+
+    <div class="t narrow">
+      <div class="k">최다 판매</div>
+      <div class="v" style="font-size:19px">토마토 파스타</div>
+      <div class="sub">19개 · 리뷰 언급 0번</div>
+    </div>
+    <div class="t narrow">
+      <div class="k">최다 칭찬</div>
+      <div class="v" style="font-size:19px">묵은지 리조또</div>
+      <div class="sub">리뷰 5번 · 판매 12개</div>
+    </div>
+    <div class="t narrow">
+      <div class="k">주문 대비 반응</div>
+      <div class="v pos">2<small>명 중 1명</small></div>
+      <div class="sub">해산물 샐러드</div>
+    </div>
+
+    <div class="t full find">
+      <div class="over">겹쳐 보니</div>
+      <p>잘 팔리고 칭찬도 받는 메뉴는 <b>라구 파스타 · 묵은지 리조또</b> 둘입니다. 검증이 끝난 간판입니다.</p>
+      <p>판매 상위 <b>아메리카노</b>는 리뷰에 한 번도 안 나옵니다. <b>해산물 샐러드</b>는 반응이 좋은데 정작 주문이 적습니다.</p>
+    </div>
+
+    <div class="t half">
+      <div class="n">1</div>
+      <h5>광고에는 라구 파스타 · 묵은지 리조또를 내세우세요</h5>
+      <p class="desc">광고로 새 손님이 와도 실망하지 않는, 판매와 리뷰가 모두 검증된 메뉴입니다.</p>
+    </div>
+    <div class="t half">
+      <div class="n">2</div>
+      <h5>해산물 샐러드를 직원 추천 1순위로 올리세요</h5>
+      <p class="desc">반응은 검증됐는데 한 달 6개뿐. 권하면 팔립니다.</p>
+    </div>
+
+    <div class="t full">
+      <div class="barfoot">
+        <span class="src">표본 317건 · 리뷰 26건 · 2026-07-22</span>
+        <button class="btn">추천 새로 생성</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ E ══════ -->
+<div class="head">
+  <span class="tag">밤티 없음</span>
+  <h2>8. 문답 — 질문이 제목, 답이 본문</h2>
+  <p>섹션 제목을 명사 라벨 대신 사장님이 실제로 궁금해하는 질문으로 씁니다. 수치는 답 아래에 근거로 붙습니다. 컨설팅 보고서, 설명이 필요한 화면, 상담형 서비스에 맞습니다.</p>
+</div>
+<div class="frame sk-qa">
+  <div class="over">MENU REPORT · 최근 30일</div>
+  <div class="qa">
+    <div class="q">뭘 보고 판단한 건가요?</div>
+    <p class="a">포스기에 찍힌 판매 기록과 손님이 남긴 리뷰, 두 가지를 겹쳐 읽었습니다. 한쪽만 보면 <b>많이 팔리는 메뉴</b>와 <b>사랑받는 메뉴</b>를 구분할 수 없습니다.</p>
+    <div class="facts">
+      <div class="f"><div class="k">판매된 메뉴</div><div class="v">72<small>종</small> 317<small>개</small></div></div>
+      <div class="f"><div class="k">매출</div><div class="v">7,516,800<small>원</small></div></div>
+      <div class="f"><div class="k">리뷰 속 언급</div><div class="v">26<small>번</small></div></div>
+    </div>
+  </div>
+  <div class="qa">
+    <div class="q">그래서 우리 간판 메뉴는<br>뭔가요?</div>
+    <p class="a"><b>라구 파스타</b>와 <b>묵은지 리조또</b>입니다. 이 둘만 판매와 리뷰 양쪽에서 상위입니다. 반면 판매 1등인 아메리카노는 리뷰에 <span class="em">한 번도</span> 안 나옵니다. 많이 팔리지만 아무도 이야기하지 않는다는 뜻입니다.</p>
+  </div>
+  <div class="qa">
+    <div class="q">지금 뭘 하면 되나요?</div>
+    <p class="a">둘입니다. 하나는 광고 소재를 바꾸는 일, 하나는 직원이 권하는 순서를 바꾸는 일입니다.</p>
+    <div class="do">
+      <div class="n">ACTION 1</div>
+      <h5>광고에는 라구 파스타 · 묵은지 리조또를 내세우세요</h5>
+      <p>광고로 새 손님이 와도 실망하지 않는, 판매와 리뷰가 모두 검증된 메뉴입니다.</p>
+    </div>
+    <div class="do">
+      <div class="n">ACTION 2</div>
+      <h5>해산물 샐러드를 직원 추천 1순위로 올리세요</h5>
+      <p>시킨 손님 3명 중 1명이 리뷰에 쓸 만큼 반응이 좋은데 한 달 6개뿐입니다. 권하면 팔립니다.</p>
+    </div>
+  </div>
+  <div class="foot">
+    <span class="src">표본 317건 · 리뷰 26건 · 2026-07-22</span>
+    <button class="btn">추천 새로 생성</button>
+  </div>
+</div>
+
+
+
+
+<!-- ══════ 4 ══════ -->
+<div class="head">
+  <span class="tag">밤티 없음</span>
+  <h2>9. 랜딩 · 큰 히어로 + 수치 카드 + 잉크 대비 밴드</h2>
+  <p>서비스 소개·가입 유도용 메인페이지 판. 보고서 뼈대(1~3)를 랜딩에 쓰면 내부 화면처럼 나온다(실제로 겪은 사고다). 히어로 큰 헤드라인, 회색 밴드 위 수치 카드, 잉크 밴드의 핵심 수치(가운데 흰 강조 카드), 번호 원 단계 카드. 색은 액센트 하나만 쓴다(판정 아닌 수치는 회색).</p>
+</div>
+<div class="frame sk-landing">
+  <div class="hero">
+    <div class="over">MENU REPORT</div>
+    <h3>우리 가게 메뉴,<br><span class="dim">감으로</span> 팔고 계신가요?</h3>
+    <p class="lede">포스기 기록과 리뷰를 겹쳐 읽으면 <span class="hl">간판 메뉴</span>가 보입니다. 등록 한 번이면 매달 자동으로 도착합니다.</p>
+    <div class="cta"><button class="btn">내 가게 무료 진단 →</button><span class="note">로그인 없이 30초</span></div>
+  </div>
+  <div class="band">
+    <div class="kpis">
+      <div class="kpi"><div class="k">분석 데이터</div><div class="v">2종</div><div class="s">판매 기록 + 리뷰</div></div>
+      <div class="kpi"><div class="k">리포트 도착</div><div class="v">매월 자동</div><div class="s">1일 아침</div></div>
+      <div class="kpi"><div class="k">구독료 외 비용</div><div class="v dim">0원</div><div class="s">별도 비용 없음</div></div>
+      <div class="kpi"><div class="k">첫 리포트</div><div class="v acc">오늘</div><div class="s">등록 즉시 생성</div></div>
+    </div>
+  </div>
+  <div class="inkband">
+    <div class="over">이런 걸 알게 됩니다</div>
+    <h4>많이 팔리는 메뉴와<br><span class="dim">사랑받는 메뉴는 다릅니다</span></h4>
+    <div class="exgrid">
+      <div class="ex"><div class="k">판매 1위인데 리뷰</div><div class="v">0번</div></div>
+      <div class="ex hero"><div class="k">숨은 간판 메뉴</div><div class="v">2개 발견</div></div>
+      <div class="ex"><div class="k">권하면 팔릴 메뉴</div><div class="v">+31%</div></div>
+    </div>
+  </div>
+  <div class="steps">
+    <h4>이렇게 진행됩니다</h4>
+    <div class="grid">
+      <div class="card"><div class="shead"><div class="n">1</div><span class="time">30초</span></div><h5>가입</h5><p>카카오 로그인 하나로 끝</p></div>
+      <div class="card"><div class="shead"><div class="n">2</div><span class="time">1분</span></div><h5>포스 연결</h5><p>쓰는 포스를 골라 연동</p></div>
+      <div class="card"><div class="shead"><div class="n">3</div><span class="time">1분</span></div><h5>가게 등록</h5><p>리뷰 채널 주소 입력</p></div>
+      <div class="card"><div class="shead"><div class="n">4</div><span class="time">자동</span></div><h5>매월 리포트</h5><p>1일 아침 자동 도착</p></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+</body>
+</html>
