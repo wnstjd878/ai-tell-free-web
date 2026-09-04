@@ -1,6 +1,7 @@
 ---
 name: ai-tell-free-web
 description: 웹 화면(랜딩·대시보드·어드민·보고서)을 만들거나 고칠 때 AI가 뽑은 티가 안 나게 하는 규칙. 화면·목업·UI·랜딩·대시보드를 새로 그리기 전, 화면 문구나 카드 제목을 지을 때, "AI 티 난다·밋밋하다·다 비슷하다"는 지적을 받았을 때 쓴다.
+disable-model-invocation: false
 ---
 
 # AI 티 없는 웹 화면
