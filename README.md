@@ -64,6 +64,8 @@ Cursor나 다른 도구를 쓴다면 `references/VISUAL-RULES.md` 상단의 요�
 
 ## 글 고치기
 
+글 층만 따로 쓰려면 독립 저장소 [humanizer-ko](https://github.com/wnstjd878/humanizer-ko) 가 있다. 같은 규칙과 같은 검사 도구를 스킬 한 장으로 묶은 것이고, 갱신은 그쪽이 먼저다.
+
 `references/HUMANIZE-KO.md` 는 [blader/humanizer](https://github.com/blader/humanizer) (MIT) 의
 절차와 35패턴을 한국어에 맞게 옮긴 것이다. 원본은 위키백과의
 [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) 에서 왔다.

@@ -5,6 +5,8 @@ AI 냄새가 나는 글을 **뜻은 그대로 두고** 사람이 쓴 것처럼 �
 한국어 글에 맞게 옮긴 것이다. 원본은 위키백과 [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
 (WikiProject AI Cleanup 관리) 에서 왔다. 패턴 번호는 원본과 같게 두었으니 원본과 대조할 때 그대로 찾으면 된다.
 
+독립 저장소 [humanizer-ko](https://github.com/wnstjd878/humanizer-ko) 에 같은 내용이 스킬 한 장으로 있다. 고칠 일이 있으면 그쪽을 먼저 고치고 여기로 가져온다.
+
 한국어 문법 자체에서 오는 티(번역투, 이중 피동, 연결어미 뒤 쉼표, 종결어미 반복, 형식명사)는
 여기서 다시 쓰지 않는다. [im-not-ai](https://github.com/epoko77-ai/im-not-ai) (MIT) 의
 `skills/humanize-korean/references/quick-rules.md` 가 70패턴으로 이미 정리했다. 이 문서의 패턴이

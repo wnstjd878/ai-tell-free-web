@@ -63,7 +63,7 @@ python3 tools/screen_copy.py <프로젝트폴더> --strict   # 배포 직전
 ## 글을 넣으면 고쳐 쓴다
 
 사용자가 글을 붙여 넣거나 파일을 가리키며 AI 티를 없애 달라고 하면 `references/HUMANIZE-KO.md`
-를 읽고 그대로 한다. [blader/humanizer](https://github.com/blader/humanizer) 의 절차를 한국어에
+를 읽고 그대로 한다. 독립 스킬로는 https://github.com/wnstjd878/humanizer-ko 가 같은 내용이다. [blader/humanizer](https://github.com/blader/humanizer) 의 절차를 한국어에
 맞춘 것이다. 요지는 넷이다.
 
 1. **패턴을 찾는다.** 35패턴과 대조한다. 먼저 `tools/humanize_check.py` 로 기계가 잡는 것부터 본다.
